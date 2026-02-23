@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        tools:visibility="visible">
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="New life for mirea activity!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Первая кнопка" />
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:text="Вторая кнопка" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:text="Третья кнопка" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:text="Третья кнопка" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:text="Четвертая кнопка" />
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:text="Пятая кнопка" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:text="Шестая кнопка" />
+    </TableRow>
+
+</TableLayout>

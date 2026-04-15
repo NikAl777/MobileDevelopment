@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 При первом запуске в Logcat появилась последовательность: onCreate, onStart, onResume. После нажатия кнопки Home были зафиксированы вызовы onPause, onStop, onSaveInstanceState. При возврате в приложение – onRestart, onStart, onResume. При нажатии Back и повторном запуске – полный цикл от onCreate до onDestroy. Поле ввода после сворачивания сохраняло введённый текст, а после закрытия через Back – нет, что соответствует поведению, описанному в теории.
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](Images/image.png)
+![alt text](Images/image-1.png)
 
 __2.Создание и вызов Activity__
 Требовалось создать два Activity. В первом разместить поле ввода и кнопку «Отправить». При нажатии кнопки текст из поля должен передаваться во второе Activity и отображаться в TextView. 
@@ -265,13 +265,13 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 При вводе текста и нажатии кнопки открывается второе окно с переданной строкой
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](Images/image-2.png)
+![alt text](Images/image-3.png)
 
 
 Следующее задание требует создать приложение с двумя кнопками: первая открывает веб-страницу МИРЭА через неявный Intent (ACTION_VIEW), вторая позволяет поделиться текстом с ФИО студента и названием университета через ACTION_SEND.
 В модуле IntentFilter разметка содержит две кнопки. Для первой кнопки создаётся Intent с действием ACTION_VIEW и URI https://www.mirea.ru/. Для второй – Intent с действием ACTION_SEND, дополнительными полями EXTRA_SUBJECT и EXTRA_TEXT. Для выбора приложения используется Intent.createChooser().
-![alt text](image-4.png)
+![alt text](Images/image-4.png)
 ```Java
 package ru.mirea.aleksandrovnd.intentfilter;
 
@@ -356,15 +356,15 @@ public class MainActivity extends AppCompatActivity {
 
 При нажатии на первую кнопку открывается системный браузер с сайтом МИРЭА, нажатие Back возвращает в приложение. Вторая кнопка вызывает диалог выбора приложения (сообщения, заметки и т.п.) для отправки текста.
 Результат нажатия первой кнопки:
-![alt text](image-5.png)
-![alt text](image-6.png)
+![alt text](Images/image-5.png)
+![alt text](Images/image-6.png)
 Результат нажатия второй:
-![alt text](image-7.png)
+![alt text](Images/image-7.png)
 
 __3.Диалоговые окна__
 В модуле ToastApp реализовано приложение с полем ввода и кнопкой. При нажатии подсчитывается количество символов и выводится сообщение через Toast с указанием номера студента, группы и количества символов.
-![alt text](image-8.png)
-![alt text](image-9.png)
+![alt text](Images/image-8.png)
+![alt text](Images/image-9.png)
 ```Java
 package ru.mirea.aleksandrovnd.toastapp;
 
@@ -517,7 +517,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-![alt text](image-10.png)
+![alt text](Images/image-10.png)
 
 
 
@@ -572,8 +572,8 @@ public class AlertDialogFragment extends DialogFragment {
 }
 
 ```
-![alt text](image-11.png)
-![alt text](image-12.png)
+![alt text](Images/image-11.png)
+![alt text](Images/image-12.png)
 
 **Полный MainActivity с обработчиками будет отмечен в конце этого раздела, т.к. он содержит связи со всеми выше и нижеперечисленными классами**
 
@@ -629,8 +629,8 @@ public class MyDateDialogFragment extends DialogFragment {
 }
 
 ```
-![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](Images/image-13.png)
+![alt text](Images/image-14.png)
 
 
 Класс MyProgressDialogFragment демонстрирует использование ProgressDialog. Диалог с индикатором загрузки автоматически закрывается через 2 секунды с помощью Handler.
@@ -655,7 +655,7 @@ public class MyProgressDialogFragment extends DialogFragment {
 }
 
 ```
-![alt text](image-15.png)
+![alt text](Images/image-15.png)
 
 
 **ОБЩИЙ MAINACTIVITY**

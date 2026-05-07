@@ -3,15 +3,16 @@ plugins {
 }
 
 android {
-    namespace = "ru.mirea.noskovaa.lesson4"
-    compileSdk = 36
-
-    buildFeatures {
-        viewBinding = true
+    namespace = "ru.mirea.aleksandrovnd.lesson4"
+    compileSdk {
+        version = release(36) {
+            minorApiLevel = 1
+        }
     }
 
+
     defaultConfig {
-        applicationId = "ru.mirea.noskovaa.lesson4"
+        applicationId = "ru.mirea.aleksandrovnd.lesson4"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -32,6 +33,11 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding = true
+
     }
 }
 

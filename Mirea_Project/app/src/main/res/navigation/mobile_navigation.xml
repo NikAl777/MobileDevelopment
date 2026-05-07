@@ -20,4 +20,11 @@
         android:id="@+id/nav_webview"
         android:name="ru.mirea.aleksandrovnd.mirea_project.WebViewFragment"
         android:label="WebView" />
+
+    <fragment
+        android:id="@+id/nav_background"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.BackgroundTaskFragment"
+        android:label="Фоновая задача"
+        tools:layout="@layout/fragment_background_task" />
+
 </navigation>

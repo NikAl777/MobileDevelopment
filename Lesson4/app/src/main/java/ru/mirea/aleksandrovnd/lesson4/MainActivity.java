@@ -1,47 +1,33 @@
 package ru.mirea.aleksandrovnd.lesson4;
 
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import ru.mirea.aleksandrovnd.lesson4.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
 
+    private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btnCalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            int pairs = Integer.parseInt(binding.editPairs.getText().toString());
-                            int days = Integer.parseInt(binding.editDays.getText().toString());
-
-                            // Имитация долгих вычислений
-                            Thread.sleep(2000);
-
-                            final double result = (double) pairs / days;
-
-                            // Возврат в UI поток для обновления интерфейса
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    binding.tvResult.setText(String.format("Среднее кол-во пар в день: %.2f", result));
-                                }
-                            });
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
-            }
-        });
+        binding.playBtn.setText("Играть");
+        binding.pauseBtn.setText("Пауза");
+        binding.status.setText("Музыкальный плеер играет");
     }
 }

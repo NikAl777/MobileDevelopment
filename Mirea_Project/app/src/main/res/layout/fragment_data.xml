@@ -24,6 +24,6 @@
             android:textSize="16sp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Добавьте изображение или больше текста по желанию -->
+
     </LinearLayout>
 </ScrollView>

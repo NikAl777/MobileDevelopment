@@ -33,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Настраиваем AppBarConfiguration для кнопки "гамбургер"
         appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_data, R.id.nav_webview)
+                R.id.nav_home, R.id.nav_data, R.id.nav_webview,
+                R.id.nav_background,
+                R.id.nav_compass,
+                R.id.nav_camera_collage,
+                R.id.nav_audio_recorder,
+                R.id.nav_profile,
+                R.id.nav_filework)
                 .setOpenableLayout(drawerLayout)
                 .build();
 

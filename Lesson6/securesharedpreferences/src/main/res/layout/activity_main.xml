@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EncryptedSharedPreferences"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <ImageView
+            android:id="@+id/imageViewPoet"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:src="@raw/jason"
+            android:scaleType="centerCrop"
+            android:contentDescription="Изображение любимого актера"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/textViewPoetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Любимый актер: Jason Statham"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/buttonSaveSecure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить в EncryptedSharedPreferences"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Здесь появится сохранённое значение"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

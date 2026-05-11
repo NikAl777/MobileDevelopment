@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="48dp">
+
+        <Button
+            android:id="@+id/buttonAddHeroes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить супер-героев" />
+
+        <Button
+            android:id="@+id/buttonShowHeroes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Показать всех" />
+
+        <Button
+            android:id="@+id/buttonClearHeroes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Очистить базу" />
+
+        <TextView
+            android:id="@+id/textViewHeroes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Список героев" />
+
+    </LinearLayout>
+</ScrollView>

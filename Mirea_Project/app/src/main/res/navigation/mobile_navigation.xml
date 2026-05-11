@@ -27,4 +27,34 @@
         android:label="Фоновая задача"
         tools:layout="@layout/fragment_background_task" />
 
+    <fragment
+        android:id="@+id/nav_compass"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.CompassFragment"
+        android:label="Компас"
+        tools:layout="@layout/fragment_compass" />
+
+    <fragment
+        android:id="@+id/nav_camera_collage"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.CameraFragment"
+        android:label="Коллаж из фото"
+        tools:layout="@layout/fragment_camera" />
+
+    <fragment
+        android:id="@+id/nav_audio_recorder"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.AudioRecorderFragment"
+        android:label="Диктофон"
+        tools:layout="@layout/fragment_audio_recorder" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_filework"
+        android:name="ru.mirea.aleksandrovnd.mirea_project.ProfileFragment"
+        android:label="Работа с файлами"
+        tools:layout="@layout/fragment_file_work" />
+
 </navigation>

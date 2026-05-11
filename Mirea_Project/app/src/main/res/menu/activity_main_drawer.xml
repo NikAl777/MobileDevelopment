@@ -14,4 +14,27 @@
         android:id="@+id/nav_background"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="Фоновая задача" />
+
+    <item
+        android:id="@+id/nav_compass"
+        android:icon="@drawable/ic_compass_arrow"
+        android:title="Компас" />
+    <item
+        android:id="@+id/nav_camera_collage"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Коллаж из фото" />
+    <item
+        android:id="@+id/nav_audio_recorder"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Диктофон" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Профиль" />
+
+    <item
+        android:id="@+id/nav_filework"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Работа с файлами" />
+
 </menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/placesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/textPlacesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заведения"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPlacesInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="На карте отмечены кафе и места общественного питания. Нажмите на маркер, чтобы увидеть адрес и краткое описание."
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textPlacesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. Кофейня на Арбате — кофе и десерты.\n2. Пиццерия у парка Горького — пицца и горячие напитки.\n3. Бургерная на Тверской — быстрый обед.\n4. Кафе на Чистых прудах — спокойное место для встречи.\n5. Столовая у Павелецкой — недорогой полноценный обед."
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonShowAllPlaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Показать все заведения" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "83780178310",
+    "project_id": "lesson7-e7a01",
+    "storage_bucket": "lesson7-e7a01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83780178310:android:d58df9ba50e1f2b54b9c07",
+        "android_client_info": {
+          "package_name": "ru.mirea.aleksandrovnd.firebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLRC4kcmbYC3xalM3sj9l6T5-rv36zf3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

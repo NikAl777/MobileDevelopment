@@ -1,5 +1,6 @@
 package ru.mirea.aleksandrovnd.mirea_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,6 +11,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -39,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_camera_collage,
                 R.id.nav_audio_recorder,
                 R.id.nav_profile,
-                R.id.nav_filework)
+                R.id.nav_filework,
+                R.id.nav_network,
+                R.id.nav_venues)
                 .setOpenableLayout(drawerLayout)
                 .build();
 
@@ -47,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         // Связываем NavigationView с NavController
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
     }
 
     // Обработка нажатия на кнопку "назад" и открытие/закрытие Drawer
